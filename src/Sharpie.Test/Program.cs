@@ -7,17 +7,20 @@ namespace Sharpie.Test
     {
         private static void Main(string[] args)
         {
-            var elements = new P
+            var elements = new Html
             {
-                ChildNode = new TextElement
-                {
-                    Content = "I am child of P1"
-                },
-                SiblingNode = new P
+                ChildNode = new P
                 {
                     ChildNode = new TextElement
                     {
-                        Content = "I am child of P2"
+                        Content = "I am child of P1"
+                    },
+                    SiblingNode = new P
+                    {
+                        ChildNode = new TextElement
+                        {
+                            Content = "I am child of P2"
+                        }
                     }
                 }
             };
