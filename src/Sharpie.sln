@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sharpie", "Sharpie\Sharpie.csproj", "{A9DD26B3-F52C-46BF-88CA-09D336E68327}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sharpie.Test", "Sharpie.Test\Sharpie.Test.csproj", "{664940FC-865A-4D7A-BCC7-8ECCB2AFF0AC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{A9DD26B3-F52C-46BF-88CA-09D336E68327}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9DD26B3-F52C-46BF-88CA-09D336E68327}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9DD26B3-F52C-46BF-88CA-09D336E68327}.Release|Any CPU.Build.0 = Release|Any CPU
+		{664940FC-865A-4D7A-BCC7-8ECCB2AFF0AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{664940FC-865A-4D7A-BCC7-8ECCB2AFF0AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{664940FC-865A-4D7A-BCC7-8ECCB2AFF0AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{664940FC-865A-4D7A-BCC7-8ECCB2AFF0AC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
