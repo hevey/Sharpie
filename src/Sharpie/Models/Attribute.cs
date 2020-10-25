@@ -1,11 +1,11 @@
 namespace Sharpie.Models
 {
     [System.AttributeUsage(System.AttributeTargets.Field)]
-    public class AttributeAttribute : System.Attribute
+    public class Attribute : System.Attribute
     {
         public bool Required;
 
-        public AttributeAttribute()
+        public Attribute()
         {
             Required = false;
         }
