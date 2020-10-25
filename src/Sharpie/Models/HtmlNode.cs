@@ -5,33 +5,33 @@ namespace Sharpie.Models
     public abstract class HtmlNode: Element
     {
         [Attribute]
-        public string AccessKey;
+        public string? AccessKey;
         [Attribute]
-        public string Class;
+        public string? Class;
         [Attribute]
-        public string ContentEditable;
+        public string? ContentEditable;
         [Attribute]
-        public string Data;
+        public string? Data;
         [Attribute]
-        public string Dir;
+        public string? Dir;
         [Attribute]
-        public string Draggable;
+        public string? Draggable;
         [Attribute]
-        public string Hidden;
+        public string? Hidden;
         [Attribute]
-        public string Id;
+        public string? Id;
         [Attribute]
-        public string Lang;
+        public string? Lang;
         [Attribute]
-        public string SpellCheck;
+        public string? SpellCheck;
         [Attribute]
-        public string Style;
+        public string? Style;
         [Attribute]
-        public string TabIndex;
+        public string? TabIndex;
         [Attribute]
-        public string Title;
+        public string? Title;
         [Attribute]
-        public string Translate;
+        public string? Translate;
         
         public Element? SiblingNode;
         public Element? ChildNode;
