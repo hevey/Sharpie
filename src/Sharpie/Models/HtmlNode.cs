@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Sharpie.Models
@@ -35,6 +36,38 @@ namespace Sharpie.Models
         
         public Element? SiblingNode;
         public Element? ChildNode;
+
+        protected string GetAttributes()
+        {
+            var fields = GetType().GetFields();
+            var attributes = string.Empty;
+            
+            foreach (var fieldInfo in fields)
+            {
+                var attrs = fieldInfo.GetCustomAttributes(false);
+                
+                foreach (var attr in attrs)
+                {
+                    if (attr is not Attribute attribute) continue;
+                    
+                    var name = fieldInfo.Name.ToLower();
+                    var value = fieldInfo.GetValue(this);
+                    
+                    if (attribute.Required && value == null)
+                    {
+                        throw new InvalidOperationException($"Attribute {name} is required");
+                    }
+
+                    if (value == null) continue;
+                    
+                    var stringAttribute = (string) value == string.Empty ? name : $"{name}='{value}'";
+                    attributes += $" {stringAttribute}";
+
+                } 
+            }
+
+            return attributes;
+        }
         
     }
 }
