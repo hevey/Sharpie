@@ -3,6 +3,7 @@ using Sharpie.Models;
 public class P : HtmlNode
 {
     private string? _content;
+    
     public override string? Render()
     {
         _content = ChildNode?.Render();
