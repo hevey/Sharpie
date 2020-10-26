@@ -1,6 +1,6 @@
 using Sharpie.Models;
 
-public class P : HtmlNode
+public class P : HtmlElement
 {
     private string? _content;
 

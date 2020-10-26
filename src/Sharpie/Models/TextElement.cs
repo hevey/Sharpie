@@ -1,6 +1,6 @@
 namespace Sharpie.Models
 {
-    public class TextElement : Element
+    public class TextElement : Node
     {
         public string? Content { get; set; }
         public override string? Render()

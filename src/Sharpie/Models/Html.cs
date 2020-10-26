@@ -1,6 +1,6 @@
 namespace Sharpie.Models
 {
-    public class Html : HtmlNode
+    public class Html : HtmlElement
     {
         public string? xmlns;
         

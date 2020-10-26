@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Sharpie.Models
 {
-    public abstract class HtmlNode: Element
+    public abstract class HtmlElement: Node
     {
         [Attribute]
         public string? AccessKey;
@@ -34,8 +34,8 @@ namespace Sharpie.Models
         [Attribute]
         public string? Translate;
         
-        public Element? SiblingNode;
-        public Element? ChildNode;
+        public Node? SiblingNode;
+        public Node? ChildNode;
 
         protected string GetAttributes()
         {
