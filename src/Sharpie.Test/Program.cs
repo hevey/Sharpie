@@ -11,6 +11,8 @@ namespace Sharpie.Test
             {
                 ChildNode = new P
                 {
+                    Class = "test test2 test3",
+                    Id = "p",
                     ChildNode = new TextElement
                     {
                         Content = "I am child of P1"
@@ -20,7 +22,8 @@ namespace Sharpie.Test
                         ChildNode = new TextElement
                         {
                             Content = "I am child of P2"
-                        }
+                        },
+                        SiblingNode = new P()
                     }
                 }
             };
