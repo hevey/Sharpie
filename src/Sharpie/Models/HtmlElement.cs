@@ -34,6 +34,8 @@ namespace Sharpie.Models
         [Attribute]
         public string? Translate;
         
+        public List<Node>? AllowedChildTypes { get; init; }
+        
         public Node? SiblingNode;
         public Node? ChildNode;
 
