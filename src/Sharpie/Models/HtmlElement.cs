@@ -35,6 +35,7 @@ namespace Sharpie.Models
         public string? Translate;
         
         public List<Node>? AllowedChildTypes { get; init; }
+        public List<Node>? AllowedSiblingTypes { get; init; }
         
         public Node? SiblingNode;
         public Node? ChildNode;
@@ -70,6 +71,15 @@ namespace Sharpie.Models
 
             return attributes;
         }
+
+        protected bool IsChildAllowed(Node? childNode)
+        {
+            return AllowedChildTypes == null || childNode != null && AllowedChildTypes.Contains(childNode);
+        }
         
+        protected bool IsSiblingAllowed(Node? siblingNode)
+        {
+            return AllowedSiblingTypes == null || siblingNode != null && AllowedSiblingTypes.Contains(siblingNode);
+        }
     }
 }
