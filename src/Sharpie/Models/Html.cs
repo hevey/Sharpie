@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Sharpie.Models.Elements;
 
 namespace Sharpie.Models
 {
@@ -7,27 +8,26 @@ namespace Sharpie.Models
     {
         [Attribute]
         public string? Xmlns;
-        
-        private string? _content;
 
         public Html()
         {
-            AllowedChildTypes = new List<Node>
+            AllowedChildTypes = new List<Type>
             {
-
+                typeof(Head)
             };
         }
         
         public override string? Render()
         {
-            if (!IsChildAllowed(ChildNode))
+            if (!IsChildAllowed(ChildNode?.GetType()))
             {
-                throw new InvalidOperationException("");
+                throw new InvalidOperationException($"Child of type {ChildNode?.GetType()} is not allowed");
             }
-            _content = ChildNode?.Render();
-            _content = _content != null ? $"<html>{_content}</html>" : "<html></html>";
+            
+            Content = ChildNode?.Render();
+            Content = Content != null ? $"<html{GetAttributes()}>{Content}</html>" : $"<html{GetAttributes()}></html>";
         
-            return _content;
+            return Content;
         }
     }
 }

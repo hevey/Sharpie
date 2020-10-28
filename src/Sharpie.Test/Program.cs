@@ -1,5 +1,6 @@
 ﻿using System;
 using Sharpie.Models;
+using Sharpie.Models.Elements;
 
 namespace Sharpie.Test
 {
@@ -9,23 +10,7 @@ namespace Sharpie.Test
         {
             var elements = new Html
             {
-                ChildNode = new P
-                {
-                    Class = "test test2 test3",
-                    Id = "p",
-                    ChildNode = new TextElement
-                    {
-                        Content = "I am child of P1"
-                    },
-                    SiblingNode = new P
-                    {
-                        ChildNode = new TextElement
-                        {
-                            Content = "I am child of P2"
-                        },
-                        SiblingNode = new P()
-                    }
-                }
+                ChildNode = new Head()
             };
 
             var output = elements.Render();
