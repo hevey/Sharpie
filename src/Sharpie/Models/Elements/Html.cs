@@ -1,8 +1,7 @@
 using System;
 using System.Collections.Generic;
-using Sharpie.Models.Elements;
 
-namespace Sharpie.Models
+namespace Sharpie.Models.Elements
 {
     public class Html : HtmlElement
     {

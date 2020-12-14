@@ -1,18 +1,9 @@
 using System;
-using System.Collections.Generic;
 
 namespace Sharpie.Models.Elements
 {
-    public class Head : HtmlElement
+    public class Body: HtmlElement
     {
-
-        public Head()
-        {
-            AllowedSiblingTypes = new List<Type>
-            {
-                typeof(Body)
-            };
-        }
         public override string? Render()
         {
             if (!IsChildAllowed(ChildNode?.GetType()))
@@ -26,9 +17,9 @@ namespace Sharpie.Models.Elements
             }
             
             Content = ChildNode?.Render();
-            Content = Content != null ? $"<head>{Content}</head>" : "<head></head>";
-            
-            return Content + SiblingNode?.Render();
+            Content = Content != null ? $"<body>{Content}</body>" : "<body></body>";
+
+            return Content;
         }
     }
 }
